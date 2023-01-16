@@ -1,5 +1,70 @@
 body{
-    background-color: black;
+    background-color: gray;
     color: white;
     font: normal 15pt Arial;
+}
+
+header{
+    text-align: center;
+    width: 100%;
+    margin-left: 25%;
+    margin-top: 2%;
+    display: inline;
+}
+
+div{
+    text-align: center;
+}
+
+input{
+    margin:auto;
+    font: normal 15pt Arial;
+    border-radius: 15px;
+}
+
+input#set{
+    width: 10%;
+    min-width: 10%;
+    margin-left: 35%;   
+    color: white;
+    background-color: gray;
+    border-radius: 15px;
+    font: bold 15pt Arial;
+}
+
+div#main_div{
+    margin-top: 2%;
+    padding: 15px;
+    width: 50%;
+    height: 400px;
+    margin-left: 25%;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.397);
+}
+
+div#btns_pomo{
+    text-align: justify;
+    width: 100%;
+    display: flex;
+}
+
+div#Counter{
+    font: normal 70pt Arial;
+    height: 15%;
+    padding: 20%;
+    margin:auto;
+    text-align: center;
+}
+input#turn_btn{
+    padding: 10px;
+    text-align: center;
+    font: bold 20pt Arial;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.274);
+}
+
+footer{
+    padding: 15px;
+    text-align: center;
 }
