@@ -5,31 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f22e27b632.js" crossorigin="anonymous"></script>
     <title>ZeModoro</title>
 </head>
 <body>
     <header>
-        <a href="index.html">ZéModoro</a> 
-        <input id="set" type="button" value="&#9881; Setting" id="setting" onclick="change_settings()">
-        <hr color="white" width="60%">
+        <a href="index.html">ZéModoro Timer</a>
+    <section>
+        <a href="https://github.com/zefonsecasj" target="_blank">zefonsecasj</a>
+        <img src="25231.png" alt="github_icon">
+    </section>
     </header>
+    <hr color="white" width="60%">
+    <div id="btns_pomo">
+        <input id="focus_btn" type="button" value="Focus Timer" onclick="change_state(this.id)">
+        <input id="smbrk_btn" type="button" value="Short Break" onclick="change_state(this.id)">
+        <input id="lgbrk_btn" type="button" value="Long Break" onclick="change_state(this.id)">
+    </div>
     <div id="main_div">
-        <div id="btns_pomo">
-            <input id="focus_btn" type="button" value="Focus Timer" onclick="change_state(this.id)">
-            <input id="smbrk_btn" type="button" value="Short Break" onclick="change_state(this.id)">
-            <input id="lgbrk_btn" type="button" value="Long Break" onclick="change_state(this.id)">
-        </div>
-
-        <div id="Counter">25:00</div>
-        <div>
-            <input id="start-btn" type="button" value="START" onclick="start_counter()">
-            <input id="stop-btn" type="button" value="STOP" onclick="stop_counter()">
-            <input id="reset-btn" type="button" value="RESET" onclick="clear_counter()">
-        </div>
+        <input type="number" name="Focus Time" id="focus_input" class="num_input">
+        <div class="circle-center">
+            <section id="Counter">25:00</section>    
+        </div>    
+        <input type="number" name="Break Time" id="brk_input" class="num_input">
+    </div>
+    <div>
+        <i id="start-btn" class="fa-solid fa-play" onclick="start_counter()"></i>
+        <i id="stop-btn" class="fa-solid fa-stop" onclick="stop_counter()"></i>
+        <i id="reset-btn" class="fa-solid fa-rotate-right" onclick="clear_counter()"></i>
     </div>
     <Footer>
         <p id="PomoRounds">Pomodoro Rounds: 0°</p>
-        <a href="https://github.com/zefonsecasj" target="_blank">zefonsecasj</a>
     </Footer>
     <script src="main.js"></script>
 </body>
