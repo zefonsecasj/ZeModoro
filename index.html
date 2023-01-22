@@ -10,24 +10,25 @@
 <body>
     <header>
         <a href="index.html">ZéModoro</a> 
-        <input id="set" type="button" value="&#9881; Setting">
+        <input id="set" type="button" value="&#9881; Setting" id="setting" onclick="change_settings()">
         <hr color="white" width="60%">
     </header>
     <div id="main_div">
         <div id="btns_pomo">
-            <input id="focus_btn" type="button" value="Focus Timer">
-            <input id="smbrk_btn" type="button" value="Short Break">
-            <input id="lgbrk_btn" type="button" value="Long Break">
+            <input id="focus_btn" type="button" value="Focus Timer" onclick="change_state(this.id)">
+            <input id="smbrk_btn" type="button" value="Short Break" onclick="change_state(this.id)">
+            <input id="lgbrk_btn" type="button" value="Long Break" onclick="change_state(this.id)">
         </div>
-        <div id="Counter">
-            25:00
-        </div>
+
+        <div id="Counter">25:00</div>
         <div>
-            <input id="turn_btn" type="button" value="START" onclick="change_counting_state()">
+            <input id="start-btn" type="button" value="START" onclick="start_counter()">
+            <input id="stop-btn" type="button" value="STOP" onclick="stop_counter()">
+            <input id="reset-btn" type="button" value="RESET" onclick="clear_counter()">
         </div>
     </div>
     <Footer>
-        <p>Pomodoro Rounds: 0°</p>
+        <p id="PomoRounds">Pomodoro Rounds: 0°</p>
         <a href="https://github.com/zefonsecasj" target="_blank">zefonsecasj</a>
     </Footer>
     <script src="main.js"></script>
