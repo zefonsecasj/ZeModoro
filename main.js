@@ -38,7 +38,7 @@ function start_counter(){
                 counterMin = longBreak
                 break
         }
-        updateCounterId = setInterval(counter,10, counterMin, counterSec)
+        updateCounterId = setInterval(counter,1000, counterMin, counterSec)
         enable_counter = false
     }
 }
