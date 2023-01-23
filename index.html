@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/f22e27b632.js" crossorigin="anonymous"></script>
+    <!--I took all items from fontawesome.com, so create your account in order to access the same icons i used or use some you want-->
+    <script src="https://kit.fontawesome.com/yourid.js" crossorigin="anonymous"></script>
     <title>ZeModoro</title>
 </head>
 <body>
     <header>
         <a href="index.html">ZéModoro Timer</a>
-        <a href="https://github.com/zefonsecasj" target="_blank">zefonsecasj</a>
+    <div>
+        <a href="https://github.com/zefonsecasj" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/carlos-josé-fonseca-simoes-junior-031067187" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
     </header>
-    <img src="25231.png" alt="github_icon">
-    <hr color="white" width="60%">
+    <hr color="white" width="52%">
     <div id="btns_pomo">
         <input id="focus_btn" type="button" value="Focus Timer" onclick="change_state(this.id)">
         <input id="smbrk_btn" type="button" value="Short Break" onclick="change_state(this.id)">
@@ -23,17 +26,17 @@
     <div id="main_div">
         <div class="center-options">
             <p>Pomo Timer Adjust</p>
-            <input type="number" name="Focus Time" id="focus_input" class="num_input">
-            <i class="fa-solid fa-check"></i>
+            <input type="number" name="Focus Time" id="focus_input" class="num_input" placeholder="25">
+            <i class="fa-regular fa-square-check" onclick="set_pomo()"></i>
         </div>
         <div class="circle-center" id="center_div">
             <section id="Counter">25:00</section>
-            <p>You Gotta Work!</p> 
+            <p id="center-text">You Gotta Work!</p> 
         </div>
         <div class="center-options">
             <p>Break Timer Adjust</p>
-            <input type="number" name="Break Time" id="brk_input" class="num_input">
-            <i class="fa-solid fa-check"></i>
+            <input type="number" name="Break Time" id="brk_input" class="num_input" placeholder="5">
+            <i class="fa-regular fa-square-check" onclick="set_break()"></i>
         </div>   
     </div>
     <div>
