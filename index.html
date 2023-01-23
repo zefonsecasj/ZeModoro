@@ -11,11 +11,9 @@
 <body>
     <header>
         <a href="index.html">ZéModoro Timer</a>
-    <section>
         <a href="https://github.com/zefonsecasj" target="_blank">zefonsecasj</a>
-        <img src="25231.png" alt="github_icon">
-    </section>
     </header>
+    <img src="25231.png" alt="github_icon">
     <hr color="white" width="60%">
     <div id="btns_pomo">
         <input id="focus_btn" type="button" value="Focus Timer" onclick="change_state(this.id)">
@@ -23,15 +21,24 @@
         <input id="lgbrk_btn" type="button" value="Long Break" onclick="change_state(this.id)">
     </div>
     <div id="main_div">
-        <input type="number" name="Focus Time" id="focus_input" class="num_input">
-        <div class="circle-center">
-            <section id="Counter">25:00</section>    
-        </div>    
-        <input type="number" name="Break Time" id="brk_input" class="num_input">
+        <div class="center-options">
+            <p>Pomo Timer Adjust</p>
+            <input type="number" name="Focus Time" id="focus_input" class="num_input">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="circle-center" id="center_div">
+            <section id="Counter">25:00</section>
+            <p>You Gotta Work!</p> 
+        </div>
+        <div class="center-options">
+            <p>Break Timer Adjust</p>
+            <input type="number" name="Break Time" id="brk_input" class="num_input">
+            <i class="fa-solid fa-check"></i>
+        </div>   
     </div>
     <div>
         <i id="start-btn" class="fa-solid fa-play" onclick="start_counter()"></i>
-        <i id="stop-btn" class="fa-solid fa-stop" onclick="stop_counter()"></i>
+        <i id="stop-btn" class="fa-solid fa-pause" onclick="stop_counter()"></i>
         <i id="reset-btn" class="fa-solid fa-rotate-right" onclick="clear_counter()"></i>
     </div>
     <Footer>

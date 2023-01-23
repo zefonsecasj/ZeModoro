@@ -8,16 +8,14 @@ var pomoRounds = 0
 function change_state(id){
     if(id=='focus_btn'){
         state = 1
-        window.document.getElementById('Counter').innerText = "25:00"
     }
     else if(id=='smbrk_btn'){
-        window.document.getElementById('Counter').innerText = "05:00"
         state = 2
     }
     else{
-        window.document.getElementById('Counter').innerText = "30:00"
         state = 3
     }
+    background_styling(state)
     min = 1
     second = 00
 }
@@ -127,4 +125,30 @@ function time_stamper(min,second){
 
 function change_settings(){
     window.alert('TEste')
+}
+
+
+function background_styling(state){
+    var centerDiv = window.document.getElementById('center_div').style
+    switch(state){
+        case(1):
+            window.document.getElementById('Counter').innerText = "25:00"
+            centerDiv.background = "url('./work_test.jpg')"
+            centerDiv.backgroundSize = "cover"
+            document.body.style.backgroundColor = '#5E6D72'
+            break
+        case(2):
+            window.document.getElementById('Counter').innerText = "05:00"
+            centerDiv.background = "url('./small_break.jpg')"
+            centerDiv.backgroundSize = "cover"
+            document.body.style.backgroundColor = '#9BBBDB'
+            break
+        case(3):
+            window.document.getElementById('Counter').innerText = "30:00"    
+            centerDiv.background = "url('./nap_test.jpg')"
+            centerDiv.backgroundSize = "cover"
+            document.body.style.backgroundColor = '#555938'
+            break
+    }
+
 }
