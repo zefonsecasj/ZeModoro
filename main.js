@@ -89,7 +89,8 @@ function counter(firstMin, fullSec){
                 state = 1
                 window.document.getElementById('Counter').innerText = "25:00"
                 break
-        }
+        } 
+        background_styling(state)
     }
     else{
         var secTimer = fullSec-second
