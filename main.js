@@ -25,7 +25,7 @@ function change_state(id){
 
 function start_counter(){
     if(enable_counter){
-        const counterSec = 60
+        const counterSec = 59
         let counterMin
         switch (state){
             case(1):
@@ -38,6 +38,7 @@ function start_counter(){
                 counterMin = longBreak
                 break
         }
+        document.getElementById("startSound").play()
         updateCounterId = setInterval(counter,1000, counterMin, counterSec)
         enable_counter = false
     }
@@ -94,6 +95,7 @@ function counter(firstMin, fullSec){
                 break
         } 
         background_styling(state)
+        document.getElementById('endSound').play()
     }
     else{
         var secTimer = fullSec-second
@@ -101,7 +103,7 @@ function counter(firstMin, fullSec){
         var outputText = time_stamper(minTimer,secTimer)
         document.getElementById('Counter').innerText = outputText
         second++
-        if(second > 60){
+        if(second > 59){
             second = 0
             min++
         }
